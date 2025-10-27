@@ -39,27 +39,20 @@
             padding: 15px 0;
         }
         
-        .logo {
+        /* .logo {
             display: flex;
             align-items: center;
-            /* text-decoration: none; */
-        }
-        
-        /* .logo-img {
-            width: 150px;
-            height: 1px;
-            display: flex;
-            flex-direction: column;
-             padding-bottom: 150px;
-           
+    
         } */
+        
+       
 
       #img{
         width: 10%;
       }
         
         
-        nav ul {
+        /* nav ul {
             display: flex;
             list-style: none;
         }
@@ -93,7 +86,150 @@
         
         nav ul li a:hover:after {
             width: 100%;
-        }
+        } */
+
+        /* Navigation Styles */
+nav {
+    display: flex;
+}
+
+.desktop-nav {
+    display: flex;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.desktop-nav ul li {
+    margin-left: 25px;
+}
+
+.desktop-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.desktop-nav ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b8860b;
+    transition: width 0.3s;
+}
+
+.desktop-nav ul li a:hover {
+    color: #b8860b;
+}
+
+.desktop-nav ul li a:hover:after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #b8860b;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #000;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 20px;
+}
+
+.mobile-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    transition: color 0.3s;
+}
+
+.mobile-nav ul li a:hover {
+    color: #b8860b;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .header-container .btn {
+        display: none;
+    }
+    
+    .mobile-nav .btn {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
         
         
         /* Hero Section */
