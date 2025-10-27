@@ -136,6 +136,10 @@ nav {
 
 /* Hamburger Menu */
 .hamburger {
+    position: fixed;
+    top: 0;
+    margin-left: 300px;
+    margin-top: 16px;
     display: none;
     flex-direction: column;
     cursor: pointer;
